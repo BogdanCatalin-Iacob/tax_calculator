@@ -27,3 +27,8 @@ class TaxCalculator:
         Run without ending the program
         '''
         self.window.mainloop()
+
+
+if __name__ == '__main__':
+    tax_calc = TaxCalculator()
+    tax_calc.run()
