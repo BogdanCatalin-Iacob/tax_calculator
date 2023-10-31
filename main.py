@@ -30,6 +30,13 @@ class TaxCalculator:
         self.tax_input = ctk.CTkEntry(self.window)
         self.tax_input.grid(row=1, column=1, **self.padding)
 
+        # Resul label and input
+        self.result_label = ctk.CTkLabel(self.window, text='Income:')
+        self.result_label.grid(row=2, column=0, **self.padding)
+        self.result_input = ctk.CTkEntry(self.window)
+        self.result_input.insert(0, '0')  # inserd default value
+        self.result_input.grid(row=2, column=1, **self.padding)
+
     def run(self):
         '''
         Run without ending the program
