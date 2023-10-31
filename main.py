@@ -42,6 +42,10 @@ class TaxCalculator:
             self.window, text='Calculate', command=self.calculate_tax)
         self.calculate_button.grid(row=3, column=1, **self.padding)
 
+    def update_result(self, text: str):
+        self.result_input.delete(0, ctk.END)
+        self.result_input.insert(0, text)
+
     def calculate_tax(self):
         '''
         Calculate the tax ammount based on income and tax percentage inputs
